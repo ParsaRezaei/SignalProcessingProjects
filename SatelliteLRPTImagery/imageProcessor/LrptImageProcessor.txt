@@ -1,0 +1,214 @@
+                     LRPT IMAGE PROCESSOR
+
+INSTALLATION
+
+Extract all the files in the Zip archive to a directory /outside/ the
+C:\Program Files\ tree.  I suggest C:\Tools\SatSignal\LRPTprocessor\
+The program has been developed under Windows 10/64 but I would expect
+it to run on Windows-XP and later.  Windows-7 and earlier are not
+supported.  The program requires my Runtime Library Bundle to be installed,
+if you don't already have it (not required should you already have the
+MSG Data Manager installed).
+  https://www.satsignal.eu/software/runtime.html
+
+
+STATUS
+
+The program is unsupported software so please contact
+the GEO-Subscribers or SatSignal group for help.
+
+
+USAGE
+
+The program can remove the edge compression present in the raw scan data
+from the Meteor-M N2 LRPT data, create a vegetation image, thermal image,
+and a false-colour image.  The thermal components rely on you saving a
+1-2-5 image from the decoder program.  In the LRPT offline decoder:
+
+  Red => channel 1, 0.5 - 0.7 µm
+  Green => channel 2, 0.7 - 1.1 µm
+  Blue => channel 5, 10.5 - 11.5 µm
+
+You can feed the program with a image (BMP or JPG) named on the command-line,
+or use drag-and-drop from File Explorer onto the open program, or use the
+File|Open menu.  Output images are automatically saved as JPG or BMP in the
+same directory as the input image.
+
+Use drag-and-drop to load.  You will need the 10 µm thermal channel
+(PID: 68) for the options which depend on thermal.
+
+The program has been developed in Embarcadero's Delphi using Windows-10,
+and I would hope that the program would work on Windows XP SP3 and later.
+It will also work in Linux/WINE!  Only Windows-10 is supported, though.
+
+Feedback to the GEO-Subscribers group, please.
+  https://groups.io/g/MSG-1
+
+
+RELEASE HISTORY
+
+2015-Apr-24  1.1.0.2  Make remapped image display first
+                      Make remapped image auto-centre
+                      Fit to window ..
+                      .. left click image to toggle
+                      Adjustable histogram equalisation for infra-red image ..
+                      .. right-click the image to change
+                      Add image hints
+                      Add flip-vertically option for northbound passes
+                      Add Help, About menu
+
+2015-Apr-24  1.1.0.3  Add version number to caption
+                      Rename .exe to LrptImageProcessor
+
+2015-Apr-25  1.1.0.4  Add sharpening & histogram options for false-colour image
+                      Add File|Open menu
+                      Add Option|CLUT menu ..
+                      .. rename default colour lookup table to ..
+                      .. CLUT_1_TempToColourHLS.bmp
+                      .. all CLUTs must be named CLUT_<name>.bmp
+                      .. CLUTs must be 256 x 256 24-bit RGB bitmaps
+                      .. be aware that PhotoShop produces broken .BMP files
+                      Handle drop to program's icon
+                      Improved image centre behaviour on reprocess
+
+2015-Apr-26  1.1.0.5  Add classic RGB124 image
+                      Warn if no suitable colour lookup tables found
+                      Replace flip by rotate 180
+
+2015-Apr-27  1.1.0.6  Make geometry correction optional
+
+2015-Jun-18  1.1.0.7  Add RGB 122 image
+                      Add setup dialog ..
+                      .. choice of which images to save
+                      .. choice of save format (BMP/JPG/as-input)
+                      .. move geometry correction choice from main menu
+
+2015-Jun-22  1.2.0.8  Revised video-to-temperature calculation ..
+                      .. is improved but still very approximate
+                      .. colours will be different
+                      .. nearer to SatSignal colours
+                      .. approximate temperature displayed in status line
+                      Restore ..
+                      .. histogram equalisation and sharpening options
+                      .. accidentally broken in previous release
+
+2015-Aug-11  1.2.1.9  Add setup option to crispen the saved remapped image
+
+2015-Aug-13  1.2.2.10  Handle very cold IR data better in False Colour
+
+2015-Oct-07  1.2.3.11  Add IR negative image option (right-click)
+
+2015-Dec-19  1.2.4.12  Use mouse wheel to scroll image ..
+                       .. shift-wheel to scroll horizontally.
+
+2016-Feb-15  1.2.5.13  Change mouse wheel scroll direction
+
+2016-Dec-29  1.2.6.14  Accept "-close" second command-line parameter ..
+                       .. to exit after processing a file
+
+2020.01.27.18  Narrow down range of .BMP file in the File Open dialog ..
+               .. to avoid displaying already processed files.
+               Alter dialog to distinguish RGB and per-channel files
+               Use yyyy-mm-dd-rev version numbering
+               Experimental Day/Night mode
+               Key ESC closes the program
+
+2020.02.05.24  Start intergration of MeteorMapper function
+               Check for Keplers being available, add browse dialog
+               Force Kepler path to be a folder
+               Correct using wrong Kepler location
+               Add right-click to copy dialog text to the clipboard
+
+2020.02.14.34  Add overlays for "raw" and "corrected" images
+               Add colour choice for overlay
+               Add offset for files not recorded in UTC
+               Add warning if country boundary data not found
+               Support 123 files in addition to 122 and 125 files
+               Remove immediate File menu on startup
+               Correct processing with drag-and-drop
+               Close program if Kepler path changed
+               Day/night still to be improved
+
+2020.02.18.35  Add support for RGB123 images, where ice crystals and snow
+               display in cyan colours
+               Please check your saved files list in Options, Setup
+
+2020.02.19.36  Alter the way overlays are generated
+               Save overlay with image option
+               Add station names to the overlay
+               Overlays not available on original source image
+
+2020.02.23.40  Cursor keys adjust overlay location
+               Save images only on program exit
+               Ensure overlay saved with images is shifted
+               Improved detection of pass time for late morning passes
+
+2020.03.02.48  Update of day/night algorithm
+               Overlay enhancements ...
+               .. improved RGB overlay to greyscale infra-red image
+               .. choice of line thickness
+               Suspect that thermal and vis 0.8 aren't precisely aligned ..
+               .. so add line/pixel offset options in setup form
+               .. applies to False-colour and Day/Night tabs only
+               Add right-click|setup to image pop-up menu
+               Add Help|Support menu pointing to the SatSignal group
+               Fix day/night not appearing when BMP dragged onto icon ..
+               .. search program directory for palette
+               Fix Copy-to-Clipboard not working
+
+2020.03.17.53  Accept .STAT files with local decimal separator ..
+               .. avoid 122 etc. composite .STAT files
+               .. warn if .68 etc. files aren't loaded
+               Better attempt at resolving UTC/Moscow/Japan times?
+               Add "Processing..." to status bar while busy.
+               Reduce main window initial size, it's not needed
+               Don't check Kepler age when using historic Kepler data
+
+2020.05.02.56  "0" UTC time zone means "0"
+               Option for red vegetation (RGB211)
+               Accept command-line parameter /out=<directory name> ..
+               .. <source-file>_65.bmp /out=C:\Tools\LRPT\Tests
+               .. the directory must already exist
+               .. the source file must be the first parameter
+               Add "Exit" to the image right-click pop-up menu
+
+2020.05.07.57  Setup option to detect thermal data ..
+               .. if not thermal don't display misleading images
+               .. and don't save them
+
+2020.07.13.58  Handle over-long files ..
+               .. spurious data at file end removed
+               .. original file saved as ".copy" rather than ".bmp"
+               .. updated file saved with orginal name
+               .. file timestamp not [yet] altered
+               .. so direction and boundaries will be wrong
+
+2021.06.25.60  Allow 30 minute time zone steps
+
+
+REGISTRATION
+
+If you use and like this software, please consider saying
+"thank you" with a donation.  You can make a donation by
+sending me an Amazon Gift Certificate here:
+
+  https://www.amazon.co.uk/gp/gc/order-email/ref=g_gc-dp_bnow_email
+
+My e-mail for Amazon is:   david-taylor@blueyonder.co.uk
+
+Please note that this MUST be sent to the UK branch of Amazon.
+
+Should you prefer to use PayPal, I am: davidtaylor@writeme.com
+
+
+SUPPORT
+
+Please direct questions to the GEO Subscribers group:
+  https://groups.io/g/MSG-1
+
+
+AUTHOR
+
+Copyright © David J Taylor, Edinburgh
+Web site:  https://www.satsignal.eu
+E-mail:    davidtaylor@writeme.com

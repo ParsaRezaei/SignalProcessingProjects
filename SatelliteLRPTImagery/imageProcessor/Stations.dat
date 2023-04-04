@@ -1,0 +1,373 @@
+#-----------------------------------------------------------------
+#
+#	File Stations.dat - for use with HRPT Reader
+#	Place in the same folder as ReadHRPT.exe
+#	Edit the file according to the following instructions
+#
+# Entries are one per line, repeated for each city
+#	Name, code, longitude, latitude
+#	Name, code, longitude, latitude
+#	Name, code, longitude, latitude
+#
+# - Entries are each four items long
+# - names with spaces must be enclosed in quotation marks, e.g. "+Rio de Janeiro"
+# - the leading character of the name is the marker if ".", "+", "x" or "*"
+# - lines starting "#" are ignored
+# - the decimal separator is a period ".", not a comma ","
+# - longitude, west is negative
+# - latitude, south is negative
+# - locations are decimal degrees, NOT degrees and minutes
+#
+# Ville, Code, longitude (ouest est négatif), latitude (sud est négatif)
+# Most information supplied by Gérard Kruger, F6BEK
+# Some names anglicised, and some stations added by David Taylor
+# Gérard also marked the EUMETSAT HRPT stations with "*"
+#
+# 2006 Jul 18  Svalbard KSAT station corrected
+# 2006 Jul 21  Lannion data slightly adjusted
+# 2006 Aug 07  Further locations added by Gérard Kruger
+#              Stations are now grouped by region in this file
+#              Previous version still available as stations1.dat
+# 2006 Dec 15  More stations added by Gérard Kruger, F6BEK
+#              Driven by the world-wide MetOp data we are now enjoying!
+# 2006 Dec 31  More stations added by Gérard Kruger, F6BEK
+# 2007 Feb 07  More stations added by Gérard Kruger, F6BEK
+# 2007 Aug 15  Noted that "." also accepted as a marker character
+# 2016-Aug-23  Added Melbourne
+#
+#-----------------------------------------------------------------
+#
+#
+# -----------------------
+# Africa and Indian Ocean
+# -----------------------
+#
++Abidjan,Abid,-4.02,5.32
++Accra,Accra,0.25,5.75
++Agadir,Ag,-9.67,30.50
++Alger,Al,3.0,36.83
++Alexandria,Alx,29.92,31.13
++Antanananarivo,Tan,47.50,-18.87
++Bamako,Bko,-7.98,12.67
++Banjul,Ban,-16.65,13.47
++Béchar,Bech,-2.28,31.58
++Belfast,Bel,-5.83,54.67
++Bissau,Bis,-15.65,11.87
+"+Bobo Dioulasso",Bobo,-4.30,11.18
++Bouaflé,Bfle,-5.78,7.02
++Bucarest,Buc,26.12,44.42
++Budapest,Bud,19.05,47.50
+"+Cape Verde",CVerde,-24.00,16.00
++Cairo,Cai,31.25,30.03
++Capetown,Cap,18.47,-33.93
++Casablanca,Cas,-7.58,33.65
++Conakry,Cry,-13.72,9.52
++Dakar,Dak,-17.45,14.63
++Dublin,Dub,-6.25,53.33
++Durban,Dur,31.00,-29.88
+"+El Golea",ElGol,2.85,30.58
++Freetown,Free,-13.28,8.50
++Gao,Gao,-0.08,16.33
++Ghadames,Gha,9.50,30.13
++Haparanda,Hap,24.17,65.83
++Johannesburg,Joh,28.03,-26.17
++Kampala,Kam,32.58,0.32
++Lagos,Lag,3.47,6.45
++Lomé,Lome,1.35,6.17
++London,Lon,-0.17,51.50
++Marrakech,Mar,-8.0,31.82
++Monrovia,Mon,-10.77,6.33
++Mopti,Mop,-4.17,14.5
++Ndjamena,Ndj,14.99,12.17
++Nairobi,Nai,36.83,-1.28
++Niamey,Nia,2.08,13.53
++Nouadhibou,Nbou,-17.02,20.9
++Nouakchott,Ncht,-15.97,18.15
++Oran,Or,-0.63,35.75
++Ouagadougou,Ouaga,-1.67,12.33
++Ouargla,Ouarg,5.27,32.0
+"+Port Harcourt",PtHa,7.17,4.72
++Rabat,Rab,-6.85,34.03
+"+Saint Louis",StL,-16.5,16.02
++Tamanrasset,Tam,5.47,22.83
++Tbilisi,Tbi,44.63,41.72
++Timimoun,Tim,0.23,25.29
++Tombouctou,Tomb,-2.98,16.82
++Tripoli,Tri,13.18,32.9
++Tunis,Tun,10.22,36.83
+#
+#
+# ------
+# Arctic
+# ------
+#
++Alert,Al,-62.00,82.50
++Amderma,Am,61.58,69.73
++Ammasalik,Am,-38.00,65.58
++Deception,Dec,-74.63,62.03
++Dundas,Ddas,-68.50,76.58
++Dikson,Dik,80.65,73.53
++Eureka,Eka,-85.67,80.00
++Godthab,Gtb,-51.58,64.25
++Isachsen,Isn,-106.00,79.33
++Pangnirtung,Png,-65.75,66.08
+"+Port Harrisson",PtH,-78.25,58.42
++Scoresbysund,Scd,-22.00,70.50
++Skellefteå,Ske,20.98,64.78
++Thule,Thu,-69.50,77.50
++Tuktoyaktuk,Tuk,-133.00,69.45
++Upernavik,Upk,-56.08,72.67
+#
+#
+# --------------------------------
+# Middle East, East and India zone
+# --------------------------------
+#
++Amman,Amm,35.93,31.95
++Arkangelsk,Ark,40.67,64.53
++Ankara,Ank,32.83,39.92
++Baghdad,Bag,44.43,33.33
++Batumi,Bat,41.60,41.62
++Beyrouth,Bey,35.50,33.87
++Bombay,Bom,72.85,18.93
++Calcuta,Cal,88.33,22.50
++Damas,Dam,36.32,33.50
++Haifa,Hai,34.98,32.82
++Jerusalem,Jer,35.22,31.78
++Karachi,Kar,67.03,24.85
++Kazan,Kaz,49.17,55.75
++Kiev,Kyev,30.50,50.42
++Kirov,Kir,49.63,58.63
++Moscow,Mos,37.70,55.75
++Murmansk,Murm,33.13,68.98
+"+New Delhi",Del,77.23,28.67
+"+Nizhmiy Novgorod",Nov,44.00,56.33
++Odessa,Od,30.77,46.50
++Rostof,Ros,39.75,47.25
++Riyad,Ria,46.77,24.65
++Salekhard,Sal,66.58,66.55
++Samara,Sam,50.17,53.17
++Saratof,Sar,45.92,51.50
++Sevastopol,Sev,33.52,44.60
+"+St Petersburg",StP,30.42,59.92
++Tabriz,Tbz,46.30,38.08
++Teheran,Teh,51.43,35.67
+"+Tel Aviv",Tel,34.77,32.08
++Volgograd,Vol,44.50,48.75
++Yerevan,Yer,44.52,40.17
++Yekaterinenburg,Yek,60.58,56.87
+#
+#
+# -------------------------
+# Europe and North Atlantic
+# -------------------------
+#
+"+Angra de Heroismo",Ang,-27.23,38.67
++Bergen,Bgn,5.32,60.20
++Berlin,Ber,13.42,52.53
++Birmingham,Bir,-1.83,52.50
++Copenhagen,Cop,12.57,55.72
++Darmstadt,Dar,8.65,49.87
++Edinburgh,Edi,-3.22,55.95
++Funchal,Fun,-16.88,32.63
++Gibraltar,Gib,-5.35,36.15
++Hammerfest,Ham,23.73,70.67
++Helsinki,Hel,25.0,60.13
++Horta,Hor,-28.67,38.53
++Jakobstad,Jak,22.67,63.68
++Kokkola,Kok,23.17,63.83
+#"+Las Palmas",LasP,-15.45,28.13
++Lisbon,Lis,-9.13,38.73
++Luleå,Lul,22.17,65.58
++Madrid,Mad,-3.72,40.42
++Oslo,Oslo,10.75,59.93
++Oulu,Oul,25.43,65.00
++Palermo,Pal,13.23,38.08
++Paris,Par,2.33,48.87
+"+Ponta Delgada",Pta,-25.67,37.75
+"+Porto Novo",PtoNo,2.77,6.5
++Prague,Pra,14.43,50.10
++Reykjavik,Rey,-21.97,64.15
++Rome,Rom,12.50,41.88
++Skellefteå,Ske,20.98,64.78
++Sofia,Sof,23.30,42.67
+"+Sta Cruz Flores",Flo,-31.10,39.50
+"+Sta Cruz Graciosa",Gra,-28.02,39.10
+"+Sta Cruz Ténér",SCruz,-16.25,28.47
++Stockholm,Sto,18.08,59.33
++Strasbourg,Stb,7.75,48.59
++Tromsø,Tms,18.95,69.66
++Trondheim,Tnd,10.40,63.43
++Umeå,Ume,20.25,63.83
++Vaasa,Vas,21.60,63.10
++Vienna,Vie,16.37,48.22
++Warsaw,War,21.0,52.25
+#
+#
+# --------------------
+# US and North America
+# --------------------  
+#
++Anchorage,Anc,-150.00,61.17
++Baltimore,Bal,-76.63,39.30
++Chicago,Chi,-87.45,41.83
++Cincinnati,Cin,-84.50,39.17
++Cleveland,Cle,-81.68,41.50
++Dallas,Dal,-96.80,32.78
++Detroit,Det,-83.08,42.38
++Fairkanks,Fai,-157.83,64.83
++Houston,Hou,-95.42,29.75
+"+Kansas City",Kan,-94.62,39.08
+"+Las Vegas",Las,-115.17,36.17
+"+Los Angeles",Los,-118.25,34.00
++Miami,Mia,-80.25,25.75
+#+Minneapolis,Min,-93.25,45.00
++Montreal,-73.60,45.50
+"+New Orleans",Nwrl,-90.05,30.00
+"+New york City",Ny,-74.00,40.75
++Pittsburgh,Pit,-80.00,40.43
++Quebec,Que,-71.25,46.83
+"+Saint Louis",StL,-90.25,38.67
+"+San Francisco",SanF,-122.45,37.75
++Seattle,Sea,-122.33,47.58
++Toronto,Tor,-79.42,43.70
++Vancouver,Van,-123.10,49.22
+"+Washington DC",Was,-77.00,38.92
+#
+#
+# ----------------------------------------
+# Central, South America and Caribbean zone
+# ----------------------------------------
+#
++Bogota,Bog,-74.08,4.63
++Brasilia,Bra,-47.95,-14.75
+"+Buenos Aires",Bue,-58.50,-34.67
++Cayenne,Cay,-52.30,4.92
+"+Fort de France",FdF,-61.08,14.60
++Habana,Hab,-82.42,23.12
++Lima,Lim,-77.05,-12.10
++Mexico,Mex,-99.17,19.42
+"+Rio de Janeiro",Rio,-43.28,-22.88
+"+Santiago du Chili",San,-70.67,-33.50
+#
+#
+# -----------------
+# US State Capitals
+# ----------------- 
+#
+"+Alabama	Montgomery",Mon,-86.33,32.37
+"+Alaska	Juneau",Jun,-134.33,58.33
+"+Arizona	Phoenix",Pho,-112.05,33.5
+"+Arkansas	Little Rock",Lit,-92.28,34.7
+"+Californie	Sacramento",Sacr,-121.5,38.55
+"+Caroline Nord	Raleigh",Ral,-78.67,35.7
+"+Caroline Sud	Columbia",Col,-81.00,34.00
+"+Colorado	Denver",Den,-105.00,39.75
+"+Connecticut	Hartford",Hart,-72.70,41.75
+"+Dakota Nord	Bismarck",Bis,-100.8,46.83
+"+Dakota Sud	Pierre",Pie,-100.33,44.38
+"+Delaware	Dover",Dov,-75.53,39.17
+"+Floride	Tallahassee",Tal,-84.32,30.43
+"+Georgie	Atlanta",Atl,-84.38,33.75
+"+Hawaii	Honolulu",Hon,-157.83,21.32
+"+Idaho       	Boise",Boi,-116.20,43.63
+"+Illinois	Springfield",Spri,-89.65,39.82
+"+Indiana	Indianapolis",Ind,-86.17,39.75
+"+Iowa	        Des Moines",DMoi,-93.58,41.58
+"+Kanzas	Topeka",Top,-95.68,39.03
+"+Kentucky	Frankfort",Fra,-84.88,38.36
+"+Louisiane	Baton Rouge",Bat,-91.17,30.5
+"+Maine	        Augusta",Aug,-69.8,44.28
+"+Maryland	Annapolis",Ann,-76.5,38.98
+"+Massachussets	Boston",Bos,-70.95,42.36
+"+Michigan	Lansing",Lan,-85.57,42.73
+"+Minnesota	Saint Paul",StP,-93.17,45.00
+"+Missippi	Jackson",Jac,-90.18,32.33
+"+Missouri	Jefferson City",Jef,-92.17,38.55
+"+Montana	Helena",Hel,-112.00,46.58
+"+Nebraska	Lincoln",Lin,-96.68,40.82
+"+Nevada	Carson City",Car,-119.77,39.17
+"+New Hampshire	Concorde",Con,-71.57,43.22
+"+New Jersey	Trenton",Tren,-74.62,40.25
+"+New York	Albany",Alb,-73.82,42.67
+"+New Mexique	Santa Fe",SFe,-105.95,35.68
+"+Ohio	        Columbus",Col,-83.05,39.93
+"+Oklahoma	Oklahoma City",Okl,-97.55,35.47
+"+Oregon	Salem",Sal,-123.02,44.95
+"+Pensylvanie	Harrisburg",Harg,-76.82,40.3
+"+Rhode Island	Providence",Prov,-71.47,41.83
+"+Tennessee	Nashville",Nash,-86.83,36.17
+"+Texas	        Austin",Aus,-97.78,30.3
+"+Utah	        Salt Lake City",Salt,-111.92,40.75
+"+Vermont	Montpelier",Mont,-72.57,44.27
+"+Virginie	Richmond",Rich,-77.45,37.57
+"+Virginie Occ	Charleston",Char,-81.67,38.43
+"+Washington	Olympia",Oly,-122.88,47.05
+"+Washington DC	Washington",Was,-77.00,38.92
+"+Winsconsin	Madison",Mad,-89.37,43.07
+"+Wyoming	Cheyenne",Chey,-104.83,41.13
+#
+#
+# --------------------
+# Far East and Oceania
+# --------------------
+# 
++Adélaide,Ade,138.60,-34.93
++Auckland,Auk,174.78,-36.92
++Brisbane,Bri,153.00,-27.50
++Hanoï,Han,105.87,21.02
++Hobart,Hob,147.30,-42.90
+"+Honk Kong",HK,114.17,22.32
++Jakarta,Jak,106.75,-6.13
++Manilla,Man,120.97,14.62
++Melbourne,Mel,144.967,-37.817
++Noumea,Nou,166.43,-22.27
++Papeete,Pap,-149.57,-17.53
++Pekin,Pek,116.43,39.92
++Saigon,Sai,106.72,10.77
++Seoul,Seo,127.00,37.50
++Singapour,Sin,103.50,1.25
++Sydney,Syd,151.17,-33.92
++Tokyo,Tok,139.75,35.67
+#
+#
+# ------------------
+# Points of interest
+# ------------------
+#
+"xBaffin Bay",BAFFIN_BAY,-66.00,74.00
+"xBaffin Island",BAFFIN_Island,-72.00,69.00
+"xBeaufort sea",BEAUFORT_SEA,-129.00,74.00
+xGreenland,G_R_E_E_N_L_A_N_D,-40.00,75.00
+#+Greenwich,Gre,0.0,51.48
+"xKara sea",KARA_sea,63.00,74.00
+xKilimanjaro,Kil,37.32,-3.00
+"xMount Everest",8848,86.93,27.98
+"xNovaya Zemlya",NOVAYA-ZEMLYA,55.00,73.00
+"xVictoria Island",VICTORIA_Island,-110.00,70.00
+"xBlack sea"BLACK_sea,33.37,43.75
+#
+# -----------------------------------
+# From Giuseppe Cico, 2009 Jul 03
+# -----------------------------------
+#
+"+Brooks Falls"," Bks",-155.77,58.70
++Talkeetna," T",-150.06,62.29
++Denali," D",-148.92,63.69
++Kantishna,"K ",-150.99,63.54#
+#
+# -----------------------------------
+# EUMETSAT EARS/AVHRR ground stations
+# -----------------------------------
+#
+*Athens,Ath,23.44,38.00
+*Kangerlussuaq,Kan,-50.67,66.98
+*Lannion,Lan,-3.467,48.750
+*Maspalomas,Mas,-15.63,27.76
+*Svalbard,Sva,15.388,78.229
+#
+#
+# ----------------------------------------
+# *************
+# ----------------------------------------
+#
